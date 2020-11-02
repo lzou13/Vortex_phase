@@ -43,9 +43,11 @@ plt.colorbar()
 # In[]
 # Vortex light function
 # Input arguments 
+# L  : number of angular momentum
 # Nx : number of grids of x axis
 # Ny : number of grids of y axis
-# L  : number of angular momentum
+# lx  : box size along x axis
+# ly  : box size along y axis
 # Return 
 # phi : shape =[Nx,Ny]
 # representing the vortex phase at each grid points
