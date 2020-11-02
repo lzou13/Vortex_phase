@@ -92,3 +92,42 @@ def vortex_phase(L=1,Nx=501,Ny=501,,lx=2.0,ly=2.0):
     return phi
 # Test of function
 phi_2=vortex_phase(L=2)
+# In[]
+# Another way to get vortex phase
+# Different in the definition of loop
+import numpy as np
+import matplotlib.pyplot as plt 
+
+
+x0 = np.arange(-1,1,0.01)
+y0 = np.arange(-1,1,0.01)
+
+phase = np.zeros((x0.shape[0],y0.shape[0]))
+L = 1#拓扑荷数
+i = 0
+
+for x in x0:
+    j=0
+    for y in y0:
+        if y > 0:
+            if x==0:
+                theta = np.pi/2
+            elif x>0:
+                theta = np.arctan(y/x)
+            elif x<0:
+                theta = np.arctan(y/x)+np.pi
+        else:
+            if x==0:
+                theta = np.pi*3/2
+            elif x>0:
+                theta = np.arctan(y/x)+2*np.pi
+            elif x<0:
+                theta = np.arctan(y/x)+np.pi     
+        phase[j,i] = np.mod(theta*L,2*np.pi)
+        j=j+1
+    i=i+1
+
+plt.figure()
+plt.pcolormesh(phase)
+plt.colorbar()
+plt.title('L = '+str(L))
