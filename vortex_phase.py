@@ -49,7 +49,7 @@ plt.colorbar()
 # Return 
 # phi : shape =[Nx,Ny]
 # representing the vortex phase at each grid points
-def vortex_phase(Nx,Ny,L=1,lx=2.0,ly=2.0):
+def vortex_phase(L=1,Nx=501,Ny=501,,lx=2.0,ly=2.0):
     phi = np.zeros((Nx,Ny))
     for i in range(Nx):
         x = i/(Nx-1.0)*lx - lx/2.0
@@ -86,5 +86,5 @@ def vortex_phase(Nx,Ny,L=1,lx=2.0,ly=2.0):
     plt.figure()
     plt.pcolormesh(phi)
     plt.colorbar()
-# 
-phi_2=vortex_phase(Nx=101,Ny=101,L=2)
+# Test of function
+phi_2=vortex_phase(L=2)
