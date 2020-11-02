@@ -86,6 +86,7 @@ def vortex_phase(L=1,Nx=501,Ny=501,,lx=2.0,ly=2.0):
     plt.figure()
     plt.pcolormesh(phi)
     plt.colorbar()
+    plt.title('L = '+str(L))
     return phi
 # Test of function
 phi_2=vortex_phase(L=2)
