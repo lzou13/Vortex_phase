@@ -11,4 +11,3 @@ Nx,Ny should be odd numbers, default value is Nx=501,Ny=501.
 
 L is set default as equal to 1.
 
-For anyone who think this program is helpful to you, please click **Star** for this repository, Thank you.
