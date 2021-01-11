@@ -52,7 +52,7 @@ plt.colorbar()
 # phi : shape =[Nx,Ny]
 # representing the vortex phase at each grid points
 def vortex_phase(L=1,Nx=501,Ny=501,lx=2.0,ly=2.0):
-    phi = np.zeros((Nx,Ny))
+    phi = np.zeros((Ny,Nx))
     for i in range(Nx):
         x = i/(Nx-1.0)*lx - lx/2.0
         for j in range(Ny):
