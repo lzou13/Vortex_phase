@@ -30,10 +30,10 @@ for i in range(Nx):
             # x = 0 负轴
             if x == 0:
                 theta = np.pi*3/2
-            # 第三象限
+            # 第四象限
             elif x>0:
                 theta = np.arctan(y/x) + 2*np.pi
-            # 第四象限
+            # 第三象限
             elif x<0:
                 theta = np.arctan(y/x) + np.pi
         phi[j,i] = theta
