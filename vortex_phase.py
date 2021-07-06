@@ -72,10 +72,10 @@ def vortex_phase(L=1,Nx=501,Ny=501,lx=2.0,ly=2.0):
                 # x = 0 负轴
                 if x == 0:
                     theta = np.pi*3/2
-                # Third quadrant -- 第三象限
+                # Third quadrant -- 第四象限
                 elif x>0:
                     theta = np.arctan(y/x) + 2*np.pi
-                # Forth quadrant -- 第四象限
+                # Forth quadrant -- 第三象限
                 elif x<0:
                     theta = np.arctan(y/x) + np.pi
             # Angular momentum & polar angle --> vortex phase
